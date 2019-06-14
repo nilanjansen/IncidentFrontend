@@ -1,0 +1,41 @@
+<style>
+.incidentBox{
+  border: 1px solid black;
+  margin: auto;
+  text-align: center;
+}
+th, td{
+  padding: 10px;
+  border: 1px solid black;
+}
+</style>
+<h1>
+  Incident Table
+</h1> 
+
+<table *ngIf="incidents" class="incidentBox">
+  <tr>
+      <th>IncidentId</th>
+      <th>CreatorContact</th>
+      <th>IssueType</th>
+      <th>location</th>
+      <th>Media</th>
+      <th>Media View</th>
+  </tr>
+
+  <tr *ngFor="let incident of incidents">
+      <td>{{incident.incidentId}}</td>
+      <td>{{incident.creatorContact}}</td>
+      <td>{{incident.issueType}}</td>
+      <td>{{incident.location}}</td>
+      <td>{{incident.media}}</td>
+      <td>
+        <button 
+        type="button"
+        class="btn btn-xs btn-default"
+        (click)="viewClick(incident.media)">
+        View
+        </button>
+      </td>
+  </tr>
+</table>
