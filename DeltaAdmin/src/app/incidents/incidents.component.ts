@@ -20,7 +20,4 @@ export class IncidentsComponent implements OnInit {
       }
     );
   }
-  public viewClick(row: any) {
-    alert(row);
-  }
 }

@@ -1,4 +1,5 @@
 <style>
+  
 .incidentBox{
   border: 1px solid black;
   margin: auto;
@@ -18,9 +19,7 @@ th, td{
       <th>IncidentId</th>
       <th>CreatorContact</th>
       <th>IssueType</th>
-      <th>location</th>
-      <th>Media</th>
-      <th>Media View</th>
+      <th>Location</th>
   </tr>
 
   <tr *ngFor="let incident of incidents">
@@ -28,14 +27,5 @@ th, td{
       <td>{{incident.creatorContact}}</td>
       <td>{{incident.issueType}}</td>
       <td>{{incident.location}}</td>
-      <td>{{incident.media}}</td>
-      <td>
-        <button 
-        type="button"
-        class="btn btn-xs btn-default"
-        (click)="viewClick(incident.media)">
-        View
-        </button>
-      </td>
   </tr>
 </table>

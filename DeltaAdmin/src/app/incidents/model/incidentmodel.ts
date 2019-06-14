@@ -3,6 +3,5 @@ export class Incidentmodel {
     CreatorContact:string;
     IssueType:string;
     Location:string;
-    Media:[];
 
 }
