@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiEndPointUrl: 'https://reportincidentapi.azurewebsites.net/api/incident/getall'
 };

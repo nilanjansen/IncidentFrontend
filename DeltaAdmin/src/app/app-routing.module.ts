@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IncidentsComponent } from './incidents/incidents.component';
+import { TicketDashboardComponent } from './ticket-dashboard/ticket-dashboard.component';
 
-const routes: Routes = [
-  {path:'',component:IncidentsComponent}
-];
+const routes: Routes = [{
+  path: '', component: TicketDashboardComponent
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,53 @@
+<div class="table-responsive">
+  <div *ngIf="!spinner" class="d-flex justify-content-center">
+    <button class="btn btn-warning">
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+  </div>
+  <table class="table table-hover" *ngIf="ticketDetails.length>0">
+    <caption>Ticket details</caption>
+    <thead>
+      <tr class="table-primary">
+        <th>
+          S.No
+        </th>
+        <th>
+          Ticket number
+        </th>
+        <th>
+          Location name
+        </th>
+        <th>
+          Issue type
+        </th>
+        <th>
+          Contact number
+        </th>
+        <th>
+          Image
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let incident of ticketDetails;let i=index">
+        <tr>
+          <td>{{i+1}}</td>
+          <td>
+            {{incident.ticketNumber}}
+          </td>
+          <td>
+            {{incident.issueLocation}}
+          </td>
+          <td>
+            {{incident.issueType}}
+          </td>
+          <td>
+            {{incident.userContactNumber}}
+          </td>
+          <td><img [src]="incident.issueImage" style="height:50px;width:50px" class="rounded mx-auto" /></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

@@ -3,23 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IncidentsComponent } from './incidents/incidents.component';
-import {IncidentService} from'./incidents/services/incident.service';
-import {HttpModule} from '@angular/http';
-import {HttpClientModule} from '@angular/common/http';
+import { TicketDashboardComponent } from './ticket-dashboard/ticket-dashboard.component';
+import { TicketDashboardService } from './service/ticket-dashboard.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IncidentsComponent
+    TicketDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule,
     HttpClientModule
   ],
-  providers: [IncidentService],
-  bootstrap: [IncidentsComponent]
+  providers: [TicketDashboardService],
+  bootstrap: [TicketDashboardComponent]
 })
 export class AppModule { }
